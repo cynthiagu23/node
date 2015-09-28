@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fizzy/USSR 101</title>
+
+    <!-- Bootstrap -->
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://static.licdn.com/scds/common/u/lib/fizzy/fz-1.3.6-min.js" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">    
+    <h1>Hello, Fizzy USSR!</h1>
+
+    <div class="row">
+    <div class="col-md-6">
+
+    <div class="panel panel-primary">
+     <div class="panel-heading">
+      <h3 class="panel-title">
+      Simple Fizzy Embed Code
+      </h3>
+    </div>
+    <div class="panel-body">
+        
+        Host Page:
+        <pre>
+        Header:
+        Content-Type: text/html
+        X-FS-Page-Parse: 1
+      
+        Body:
+        <script type='fs/embed' fs-uri='http://127.0.0.1:6661/embed1' fs-id='embed1' ></script>
+        </pre> 
+
+        Embed Page (embed1.html):
+        <pre>
+ 	This is embed1.html
+	</pre>
+
+    </div>
+   </div>
+   </div> <!-- row 1, col 1-->
+
+
+    <div class="col-md-6">
+    <div class="panel panel-primary">
+     <div class="panel-heading">
+      <h3 class="panel-title">
+      Simple Fizzy Embed Display
+      </h3>
+    </div>
+    <div class="panel-body">
+      The following content is from embed1.html<br>
+      <script type='fs/embed' fs-uri='http://127.0.0.1:6661/embed1' fs-id='embed1' ></script>
+    </div>
+   </div>
+   </div> <!-- row 1, col 2 -->
+   </div> <!-- row 1 -->
+
+
+   <div class = "row">
+    <div class="col-md-6">
+    <div class="panel panel-primary">
+     <div class="panel-heading">
+      <h3 class="panel-title">
+      Simple Fizzy Embed Code
+      </h3>
+    </div>
+    <div class="panel-body">
+        Host Page:
+        <pre>
+        Header:
+        Content-Type: text/html
+        X-FS-Page-Parse: 1
+      
+        Body:
+        <script type='fs/embed' fs-uri='http://127.0.0.1:6661/embed2' fs-id='embed2' ></script>
+        </pre> 
+
+        Embed Page (embed2.html):
+        <pre>
+ 	This is embed2.html
+	</pre>
+    </div>
+    </div>
+   </div> <!-- row 2, col 1-->
+
+    <div class="col-md-6">
+    <div class="panel panel-primary">
+     <div class="panel-heading">
+      <h3 class="panel-title">
+      Simple Fizzy Embed Display
+      </h3>
+    </div>
+    <div class="panel-body">
+      The following content is from embed2.html<br>
+      <script type='fs/embed' fs-uri='http://127.0.0.1:6661/embed2' fs-id='embed2' ></script>
+    </div>
+   </div>
+   </div> <!-- row 2, col 2 -->
+   </div> <!-- row 2-- >
+
+   <div class = "row">
+    <div class="col-md-6">
+    <div class="panel panel-success">
+     <div class="panel-heading">
+      <h3 class="panel-title">
+      Fizzy Embed with USSR rendering code
+      </h3>
+    </div>
+    <div class="panel-body">
+	Host Page:
+    	<pre>
+        Header:
+        Content-Type: text/html
+        X-FS-Page-Parse: 1
+   
+	Body:
+	<script type='fs/embed' fs-uri='http://127.0.0.1:6661/embed3' fs-id='embed3' fs-render-control='server'></script>
+        </pre>
+
+	Embed Page (embed3.json):
+ 	<pre>
+	Header:
+	Content-Type: application/json
+	X-FS-TL: http://127.0.0.1:6661/temp_name.js
+        X-FS-Template-Keys: __default__=demo
+
+	Body:
+        {
+  	"name": "Mick",
+  	"count": 30
+	}
+	</pre>
+
+	Template Page (temp_name.js):
+	<pre>
+	Header:
+	Content-Type: application/javascript
+
+        Body:
+	(function() {
+  	  dust.register("demo", body_0);
+
+  	  function body_0(chk, ctx) {
+    	    return chk.write("Hello ").reference(ctx.get(["name"], false), ctx, "h").write("! You have ").reference(ctx.get(["count"], false), ctx, "h").write(" new messages.");
+          }
+          body_0.__dustBody = !0;
+          return body_0;
+        })();
+	</pre>
+	
+    </div>
+   </div>
+   </div> <!--row 3, col 1-->
+
+    <div class="col-md-6">
+    <div class="panel panel-success">
+     <div class="panel-heading">
+      <h3 class="panel-title">
+      Fizzy Embed with USSR rendering Display
+      </h3>
+    </div>
+    <div class="panel-body">
+      The following context is generated from template and json and rendered on the server side<br>
+      <script type='fs/embed' fs-uri='http://127.0.0.1:6661/embed3' fs-id='embed3' fs-render-control='server'></script>
+    </div>
+   </div>
+   </div> <!-- row 3, col 2 -->
+   </div> <!-- row 3 -->
+
+   </div> <!--container-->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
+

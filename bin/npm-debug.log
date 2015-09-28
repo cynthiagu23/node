@@ -1,0 +1,805 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'express' ]
+info using npm@1.1.9
+info using node@v0.6.13
+verbose config file /home/czhenggu/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /usr/local/lib/node_modules/npm/npmrc
+verbose cache add [ 'express', null ]
+silly cache add: name, spec, args [ undefined, 'express', [ 'express', null ] ]
+verbose parsed url { pathname: 'express', path: 'express', href: 'express' }
+verbose addNamed [ 'express', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'express', '', false ]
+verbose raw, before any munging express
+verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+verbose url resolved https://registry.npmjs.org/express
+verbose etag "6TFT54LYLYGPAPB828GC307N6"
+http GET https://registry.npmjs.org/express
+silly get cb [ 304, undefined ]
+verbose etag express from cache
+silly name, range, hasData 2 [ 'express', '', true ]
+silly versions [ 'express',
+silly versions   [ '0.14.0',
+silly versions     '0.14.1',
+silly versions     '1.0.0',
+silly versions     '1.0.1',
+silly versions     '1.0.2',
+silly versions     '1.0.3',
+silly versions     '1.0.4',
+silly versions     '1.0.5',
+silly versions     '1.0.6',
+silly versions     '1.0.7',
+silly versions     '2.5.0',
+silly versions     '2.5.1',
+silly versions     '2.5.2',
+silly versions     '2.5.3',
+silly versions     '2.5.4',
+silly versions     '2.5.5',
+silly versions     '2.5.6',
+silly versions     '2.5.7',
+silly versions     '2.5.8',
+silly versions     '2.5.9',
+silly versions     '2.5.10',
+silly versions     '2.5.11',
+silly versions     '3.0.0',
+silly versions     '3.0.1',
+silly versions     '3.0.2',
+silly versions     '3.0.3',
+silly versions     '3.0.4',
+silly versions     '3.0.5',
+silly versions     '3.0.6',
+silly versions     '3.1.0',
+silly versions     '3.1.1',
+silly versions     '3.1.2',
+silly versions     '3.2.0',
+silly versions     '3.2.1',
+silly versions     '3.2.2',
+silly versions     '3.2.3',
+silly versions     '3.2.4',
+silly versions     '3.2.5',
+silly versions     '3.2.6',
+silly versions     '3.3.0',
+silly versions     '3.3.1',
+silly versions     '3.3.2',
+silly versions     '3.3.3',
+silly versions     '3.3.4',
+silly versions     '3.3.5',
+silly versions     '3.3.6',
+silly versions     '1.0.0-beta',
+silly versions     '1.0.0-beta2',
+silly versions     '1.0.0-rc',
+silly versions     '1.0.0-rc2',
+silly versions     '1.0.0-rc3',
+silly versions     '1.0.0-rc4',
+silly versions     '3.0.0-alpha1',
+silly versions     '3.0.0-alpha2',
+silly versions     '3.0.0-alpha3',
+silly versions     '3.0.0-alpha4',
+silly versions     '3.0.0-alpha5',
+silly versions     '3.0.0-beta1',
+silly versions     '3.0.0-beta2',
+silly versions     '3.0.0-beta3',
+silly versions     '3.0.0-beta4',
+silly versions     '3.0.0-beta6',
+silly versions     '3.0.0-beta7',
+silly versions     '3.0.0-rc1',
+silly versions     '3.0.0-rc2',
+silly versions     '3.0.0-rc3',
+silly versions     '3.0.0-rc4',
+silly versions     '3.0.0-rc5',
+silly versions     '3.3.7',
+silly versions     '3.3.8',
+silly versions     '3.4.0',
+silly versions     '3.4.1',
+silly versions     '3.4.2',
+silly versions     '3.4.3',
+silly versions     '3.4.4' ] ]
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0-fips-v83.6.6.24-linux-x64-2.6.32-431.11.2.el6.bz1069874.3.x86_64',
+verbose bin dist   { shasum: '0b63ae626c96b71b78d13dfce079c10351635a86',
+verbose bin dist     tarball: 'http://registry.npmjs.org/express/-/express-3.4.4.tgz' } ]
+verbose caching /home/czhenggu/.npm/express/3.4.4/package/package.json
+verbose loadDefaults express@3.4.4
+silly resolved [ { name: 'express',
+silly resolved     description: 'Sinatra inspired web development framework',
+silly resolved     version: '3.4.4',
+silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+silly resolved        { name: 'Aaron Heckmann',
+silly resolved          email: 'aaron.heckmann+github@gmail.com' },
+silly resolved        { name: 'Ciaran Jessup', email: 'ciaranj@gmail.com' },
+silly resolved        { name: 'Guillermo Rauch', email: 'rauchg@gmail.com' } ],
+silly resolved     dependencies: 
+silly resolved      { connect: '2.11.0',
+silly resolved        commander: '1.3.2',
+silly resolved        'range-parser': '0.0.4',
+silly resolved        mkdirp: '0.3.5',
+silly resolved        cookie: '0.1.0',
+silly resolved        'buffer-crc32': '0.2.1',
+silly resolved        fresh: '0.2.0',
+silly resolved        methods: '0.1.0',
+silly resolved        send: '0.1.4',
+silly resolved        'cookie-signature': '1.0.1',
+silly resolved        debug: '*' },
+silly resolved     devDependencies: 
+silly resolved      { ejs: '*',
+silly resolved        mocha: '*',
+silly resolved        jade: '0.30.0',
+silly resolved        hjs: '*',
+silly resolved        stylus: '*',
+silly resolved        should: '2',
+silly resolved        'connect-redis': '*',
+silly resolved        marked: '*',
+silly resolved        supertest: '0.8.1 - 1' },
+silly resolved     keywords: 
+silly resolved      [ 'express',
+silly resolved        'framework',
+silly resolved        'sinatra',
+silly resolved        'web',
+silly resolved        'rest',
+silly resolved        'restful',
+silly resolved        'router',
+silly resolved        'app',
+silly resolved        'api' ],
+silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/express.git' },
+silly resolved     main: 'index',
+silly resolved     bin: { express: './bin/express' },
+silly resolved     scripts: { prepublish: 'npm prune', test: 'make test' },
+silly resolved     engines: { node: '*' },
+silly resolved     _id: 'express@3.4.4',
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.9',
+silly resolved     _nodeVersion: 'v0.6.13',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'express' } ]
+info into /usr/local/lib express@3.4.4
+info installOne express@3.4.4
+verbose from cache /home/czhenggu/.npm/express/3.4.4/package/package.json
+info unbuild /usr/local/lib/node_modules/express
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express'
+verbose mkdir done: /usr/local/lib/node_modules/express 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/express
+silly gunzTarPerm modes [ '755', '644' ]
+verbose gunzed /usr/local/lib/node_modules/express
+verbose caching /usr/local/lib/node_modules/express/package.json
+verbose loadDefaults express@3.4.4
+info preinstall express@3.4.4
+verbose from cache /usr/local/lib/node_modules/express/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/express/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'connect@2.11.0', null ]
+silly cache add: name, spec, args [ undefined, 'connect@2.11.0', [ 'connect@2.11.0', null ] ]
+verbose parsed url { pathname: 'connect@2.11.0',
+verbose parsed url   path: 'connect@2.11.0',
+verbose parsed url   href: 'connect@2.11.0' }
+silly cache add: name, spec, args [ 'connect', '2.11.0', [ 'connect', '2.11.0' ] ]
+verbose parsed url { pathname: '2.11.0', path: '2.11.0', href: '2.11.0' }
+verbose addNamed [ 'connect', '2.11.0' ]
+verbose addNamed [ '2.11.0', '2.11.0' ]
+verbose cache add [ 'commander@1.3.2', null ]
+silly cache add: name, spec, args [ undefined, 'commander@1.3.2', [ 'commander@1.3.2', null ] ]
+verbose parsed url { pathname: 'commander@1.3.2',
+verbose parsed url   path: 'commander@1.3.2',
+verbose parsed url   href: 'commander@1.3.2' }
+silly cache add: name, spec, args [ 'commander', '1.3.2', [ 'commander', '1.3.2' ] ]
+verbose parsed url { pathname: '1.3.2', path: '1.3.2', href: '1.3.2' }
+verbose addNamed [ 'commander', '1.3.2' ]
+verbose addNamed [ '1.3.2', '1.3.2' ]
+verbose cache add [ 'range-parser@0.0.4', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'range-parser@0.0.4',
+silly cache add: name, spec, args   [ 'range-parser@0.0.4', null ] ]
+verbose parsed url { pathname: 'range-parser@0.0.4',
+verbose parsed url   path: 'range-parser@0.0.4',
+verbose parsed url   href: 'range-parser@0.0.4' }
+silly cache add: name, spec, args [ 'range-parser', '0.0.4', [ 'range-parser', '0.0.4' ] ]
+verbose parsed url { pathname: '0.0.4', path: '0.0.4', href: '0.0.4' }
+verbose addNamed [ 'range-parser', '0.0.4' ]
+verbose addNamed [ '0.0.4', '0.0.4' ]
+verbose cache add [ 'mkdirp@0.3.5', null ]
+silly cache add: name, spec, args [ undefined, 'mkdirp@0.3.5', [ 'mkdirp@0.3.5', null ] ]
+verbose parsed url { pathname: 'mkdirp@0.3.5',
+verbose parsed url   path: 'mkdirp@0.3.5',
+verbose parsed url   href: 'mkdirp@0.3.5' }
+silly cache add: name, spec, args [ 'mkdirp', '0.3.5', [ 'mkdirp', '0.3.5' ] ]
+verbose parsed url { pathname: '0.3.5', path: '0.3.5', href: '0.3.5' }
+verbose addNamed [ 'mkdirp', '0.3.5' ]
+verbose addNamed [ '0.3.5', '0.3.5' ]
+verbose cache add [ 'cookie@0.1.0', null ]
+silly cache add: name, spec, args [ undefined, 'cookie@0.1.0', [ 'cookie@0.1.0', null ] ]
+verbose parsed url { pathname: 'cookie@0.1.0',
+verbose parsed url   path: 'cookie@0.1.0',
+verbose parsed url   href: 'cookie@0.1.0' }
+silly cache add: name, spec, args [ 'cookie', '0.1.0', [ 'cookie', '0.1.0' ] ]
+verbose parsed url { pathname: '0.1.0', path: '0.1.0', href: '0.1.0' }
+verbose addNamed [ 'cookie', '0.1.0' ]
+verbose addNamed [ '0.1.0', '0.1.0' ]
+verbose cache add [ 'buffer-crc32@0.2.1', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'buffer-crc32@0.2.1',
+silly cache add: name, spec, args   [ 'buffer-crc32@0.2.1', null ] ]
+verbose parsed url { pathname: 'buffer-crc32@0.2.1',
+verbose parsed url   path: 'buffer-crc32@0.2.1',
+verbose parsed url   href: 'buffer-crc32@0.2.1' }
+silly cache add: name, spec, args [ 'buffer-crc32', '0.2.1', [ 'buffer-crc32', '0.2.1' ] ]
+verbose parsed url { pathname: '0.2.1', path: '0.2.1', href: '0.2.1' }
+verbose addNamed [ 'buffer-crc32', '0.2.1' ]
+verbose addNamed [ '0.2.1', '0.2.1' ]
+verbose cache add [ 'fresh@0.2.0', null ]
+silly cache add: name, spec, args [ undefined, 'fresh@0.2.0', [ 'fresh@0.2.0', null ] ]
+verbose parsed url { pathname: 'fresh@0.2.0',
+verbose parsed url   path: 'fresh@0.2.0',
+verbose parsed url   href: 'fresh@0.2.0' }
+silly cache add: name, spec, args [ 'fresh', '0.2.0', [ 'fresh', '0.2.0' ] ]
+verbose parsed url { pathname: '0.2.0', path: '0.2.0', href: '0.2.0' }
+verbose addNamed [ 'fresh', '0.2.0' ]
+verbose addNamed [ '0.2.0', '0.2.0' ]
+verbose cache add [ 'methods@0.1.0', null ]
+silly cache add: name, spec, args [ undefined, 'methods@0.1.0', [ 'methods@0.1.0', null ] ]
+verbose parsed url { pathname: 'methods@0.1.0',
+verbose parsed url   path: 'methods@0.1.0',
+verbose parsed url   href: 'methods@0.1.0' }
+silly cache add: name, spec, args [ 'methods', '0.1.0', [ 'methods', '0.1.0' ] ]
+verbose parsed url { pathname: '0.1.0', path: '0.1.0', href: '0.1.0' }
+verbose addNamed [ 'methods', '0.1.0' ]
+verbose addNamed [ '0.1.0', '0.1.0' ]
+verbose cache add [ 'send@0.1.4', null ]
+silly cache add: name, spec, args [ undefined, 'send@0.1.4', [ 'send@0.1.4', null ] ]
+verbose parsed url { pathname: 'send@0.1.4',
+verbose parsed url   path: 'send@0.1.4',
+verbose parsed url   href: 'send@0.1.4' }
+silly cache add: name, spec, args [ 'send', '0.1.4', [ 'send', '0.1.4' ] ]
+verbose parsed url { pathname: '0.1.4', path: '0.1.4', href: '0.1.4' }
+verbose addNamed [ 'send', '0.1.4' ]
+verbose addNamed [ '0.1.4', '0.1.4' ]
+verbose cache add [ 'cookie-signature@1.0.1', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'cookie-signature@1.0.1',
+silly cache add: name, spec, args   [ 'cookie-signature@1.0.1', null ] ]
+verbose parsed url { pathname: 'cookie-signature@1.0.1',
+verbose parsed url   path: 'cookie-signature@1.0.1',
+verbose parsed url   href: 'cookie-signature@1.0.1' }
+silly cache add: name, spec, args [ 'cookie-signature', '1.0.1', [ 'cookie-signature', '1.0.1' ] ]
+verbose parsed url { pathname: '1.0.1', path: '1.0.1', href: '1.0.1' }
+verbose addNamed [ 'cookie-signature', '1.0.1' ]
+verbose addNamed [ '1.0.1', '1.0.1' ]
+verbose cache add [ 'debug@*', null ]
+silly cache add: name, spec, args [ undefined, 'debug@*', [ 'debug@*', null ] ]
+verbose parsed url { pathname: 'debug@*', path: 'debug@*', href: 'debug@*' }
+silly cache add: name, spec, args [ 'debug', '*', [ 'debug', '*' ] ]
+verbose parsed url { pathname: '*', path: '*', href: '*' }
+verbose addNamed [ 'debug', '*' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'debug', '', false ]
+verbose raw, before any munging connect/2.11.0
+verbose url resolving [ 'https://registry.npmjs.org/', './connect/2.11.0' ]
+verbose url resolved https://registry.npmjs.org/connect/2.11.0
+verbose etag "B75XFSGFQ8WSYB5RLVFCC86J"
+http GET https://registry.npmjs.org/connect/2.11.0
+verbose raw, before any munging mkdirp/0.3.5
+verbose url resolving [ 'https://registry.npmjs.org/', './mkdirp/0.3.5' ]
+verbose url resolved https://registry.npmjs.org/mkdirp/0.3.5
+verbose etag "F17Q7UKYGSABJTXY4YCL38IZK"
+http GET https://registry.npmjs.org/mkdirp/0.3.5
+verbose raw, before any munging range-parser/0.0.4
+verbose url resolving [ 'https://registry.npmjs.org/', './range-parser/0.0.4' ]
+verbose url resolved https://registry.npmjs.org/range-parser/0.0.4
+verbose etag "ATOMPY1OXN91QNEH1OX8C3XJ9"
+http GET https://registry.npmjs.org/range-parser/0.0.4
+verbose raw, before any munging commander/1.3.2
+verbose url resolving [ 'https://registry.npmjs.org/', './commander/1.3.2' ]
+verbose url resolved https://registry.npmjs.org/commander/1.3.2
+verbose etag "160ISQA5VLT8KJYZTHA0Y25B3"
+http GET https://registry.npmjs.org/commander/1.3.2
+verbose raw, before any munging cookie/0.1.0
+verbose url resolving [ 'https://registry.npmjs.org/', './cookie/0.1.0' ]
+verbose url resolved https://registry.npmjs.org/cookie/0.1.0
+verbose etag "75697BASPWOS0DSLYJ3O8OO8Y"
+http GET https://registry.npmjs.org/cookie/0.1.0
+verbose raw, before any munging buffer-crc32/0.2.1
+verbose url resolving [ 'https://registry.npmjs.org/', './buffer-crc32/0.2.1' ]
+verbose url resolved https://registry.npmjs.org/buffer-crc32/0.2.1
+verbose etag "8DEM8F3JJDFY480MJQSPLTGL7"
+http GET https://registry.npmjs.org/buffer-crc32/0.2.1
+verbose raw, before any munging cookie-signature/1.0.1
+verbose url resolving [ 'https://registry.npmjs.org/', './cookie-signature/1.0.1' ]
+verbose url resolved https://registry.npmjs.org/cookie-signature/1.0.1
+verbose etag "DRXM31E7QQC0HAK7341C8G34P"
+http GET https://registry.npmjs.org/cookie-signature/1.0.1
+verbose raw, before any munging send/0.1.4
+verbose url resolving [ 'https://registry.npmjs.org/', './send/0.1.4' ]
+verbose url resolved https://registry.npmjs.org/send/0.1.4
+verbose etag "BE8HXFF8P39DCEDV32GWCYEVD"
+http GET https://registry.npmjs.org/send/0.1.4
+verbose raw, before any munging methods/0.1.0
+verbose url resolving [ 'https://registry.npmjs.org/', './methods/0.1.0' ]
+verbose url resolved https://registry.npmjs.org/methods/0.1.0
+verbose etag "2KBAPZ9G6TS1V4AQUJELPAYHJ"
+http GET https://registry.npmjs.org/methods/0.1.0
+verbose raw, before any munging debug
+verbose url resolving [ 'https://registry.npmjs.org/', './debug' ]
+verbose url resolved https://registry.npmjs.org/debug
+verbose etag "3E1RX8WQJRE9U0DUURZQDYODZ"
+http GET https://registry.npmjs.org/debug
+verbose raw, before any munging fresh/0.2.0
+verbose url resolving [ 'https://registry.npmjs.org/', './fresh/0.2.0' ]
+verbose url resolved https://registry.npmjs.org/fresh/0.2.0
+verbose etag "DC7P6O5AMERGDM8PPNSA7KFWR"
+http GET https://registry.npmjs.org/fresh/0.2.0
+silly get cb [ 304, undefined ]
+verbose etag range-parser/0.0.4 from cache
+silly get cb [ 304, undefined ]
+verbose etag mkdirp/0.3.5 from cache
+silly get cb [ 304, undefined ]
+verbose etag cookie/0.1.0 from cache
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0-fips-v83.6.6.24-linux-x64-2.6.32-431.11.2.el6.bz1069874.3.x86_64',
+verbose bin dist   { shasum: 'c0427ffef51c10acba0782a46c9602e744ff620b',
+verbose bin dist     tarball: 'http://registry.npmjs.org/range-parser/-/range-parser-0.0.4.tgz' } ]
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0-fips-v83.6.6.24-linux-x64-2.6.32-431.11.2.el6.bz1069874.3.x86_64',
+verbose bin dist   { shasum: 'de3e5f8961c88c787ee1368df849ac4413eca8d7',
+verbose bin dist     tarball: 'http://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz' } ]
+silly get cb [ 304, undefined ]
+verbose etag buffer-crc32/0.2.1 from cache
+silly get cb [ 304, undefined ]
+verbose etag cookie-signature/1.0.1 from cache
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0-fips-v83.6.6.24-linux-x64-2.6.32-431.11.2.el6.bz1069874.3.x86_64',
+verbose bin dist   { shasum: '90eb469ddce905c866de687efc43131d8801f9d0',
+verbose bin dist     tarball: 'http://registry.npmjs.org/cookie/-/cookie-0.1.0.tgz' } ]
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0-fips-v83.6.6.24-linux-x64-2.6.32-431.11.2.el6.bz1069874.3.x86_64',
+verbose bin dist   { shasum: 'be3e5382fc02b6d6324956ac1af98aa98b08534c',
+verbose bin dist     tarball: 'http://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.2.1.tgz' } ]
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0-fips-v83.6.6.24-linux-x64-2.6.32-431.11.2.el6.bz1069874.3.x86_64',
+verbose bin dist   { shasum: '44e072148af01e6e8e24afbf12690d68ae698ecb',
+verbose bin dist     tarball: 'http://registry.npmjs.org/cookie-signature/-/cookie-signature-1.0.1.tgz' } ]
+silly get cb [ 304, undefined ]
+verbose etag send/0.1.4 from cache
+silly get cb [ 304, undefined ]
+verbose etag debug from cache
+silly get cb [ 304, undefined ]
+verbose etag fresh/0.2.0 from cache
+verbose caching /home/czhenggu/.npm/range-parser/0.0.4/package/package.json
+verbose loadDefaults range-parser@0.0.4
+verbose caching /home/czhenggu/.npm/cookie/0.1.0/package/package.json
+verbose loadDefaults cookie@0.1.0
+verbose caching /home/czhenggu/.npm/mkdirp/0.3.5/package/package.json
+verbose loadDefaults mkdirp@0.3.5
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0-fips-v83.6.6.24-linux-x64-2.6.32-431.11.2.el6.bz1069874.3.x86_64',
+verbose bin dist   { shasum: 'be70d8d1be01de61821af13780b50345a4f71abd',
+verbose bin dist     tarball: 'http://registry.npmjs.org/send/-/send-0.1.4.tgz' } ]
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0-fips-v83.6.6.24-linux-x64-2.6.32-431.11.2.el6.bz1069874.3.x86_64',
+verbose bin dist   { shasum: 'bfd9402cf3df12c4a4c310c79f99a3dde13d34a7',
+verbose bin dist     tarball: 'http://registry.npmjs.org/fresh/-/fresh-0.2.0.tgz' } ]
+silly name, range, hasData 2 [ 'debug', '', true ]
+silly versions [ 'debug',
+silly versions   [ '0.0.1',
+silly versions     '0.1.0',
+silly versions     '0.2.0',
+silly versions     '0.3.0',
+silly versions     '0.4.0',
+silly versions     '0.4.1',
+silly versions     '0.5.0',
+silly versions     '0.6.0',
+silly versions     '0.7.0',
+silly versions     '0.7.1',
+silly versions     '0.7.2',
+silly versions     '0.7.3',
+silly versions     '0.7.4',
+silly versions     '0.8.0',
+silly versions     '0.8.1',
+silly versions     '1.0.0',
+silly versions     '1.0.1',
+silly versions     '1.0.2',
+silly versions     '1.0.3',
+silly versions     '1.0.4' ] ]
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0-fips-v83.6.6.24-linux-x64-2.6.32-431.11.2.el6.bz1069874.3.x86_64',
+verbose bin dist   { shasum: '5b9c256bd54b6ec02283176fa8a0ede6d154cbf8',
+verbose bin dist     tarball: 'http://registry.npmjs.org/debug/-/debug-1.0.4.tgz' } ]
+verbose caching /home/czhenggu/.npm/buffer-crc32/0.2.1/package/package.json
+verbose loadDefaults buffer-crc32@0.2.1
+verbose caching /home/czhenggu/.npm/cookie-signature/1.0.1/package/package.json
+verbose loadDefaults cookie-signature@1.0.1
+verbose caching /home/czhenggu/.npm/send/0.1.4/package/package.json
+verbose loadDefaults send@0.1.4
+verbose caching /home/czhenggu/.npm/debug/1.0.4/package/package.json
+verbose loadDefaults debug@1.0.4
+verbose caching /home/czhenggu/.npm/fresh/0.2.0/package/package.json
+verbose loadDefaults fresh@0.2.0
+silly get cb [ 304, undefined ]
+verbose etag methods/0.1.0 from cache
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0-fips-v83.6.6.24-linux-x64-2.6.32-431.11.2.el6.bz1069874.3.x86_64',
+verbose bin dist   { shasum: '335d429eefd21b7bacf2e9c922a8d2bd14a30e4f',
+verbose bin dist     tarball: 'http://registry.npmjs.org/methods/-/methods-0.1.0.tgz' } ]
+verbose caching /home/czhenggu/.npm/methods/0.1.0/package/package.json
+verbose loadDefaults methods@0.1.0
+silly get cb [ 304, undefined ]
+verbose etag connect/2.11.0 from cache
+silly get cb [ 304, undefined ]
+verbose etag commander/1.3.2 from cache
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0-fips-v83.6.6.24-linux-x64-2.6.32-431.11.2.el6.bz1069874.3.x86_64',
+verbose bin dist   { shasum: '9991ce09ff9b85d9ead27f9d41d0b2a2df2f9284',
+verbose bin dist     tarball: 'http://registry.npmjs.org/connect/-/connect-2.11.0.tgz' } ]
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0-fips-v83.6.6.24-linux-x64-2.6.32-431.11.2.el6.bz1069874.3.x86_64',
+verbose bin dist   { shasum: '8a8f30ec670a6fdd64af52f1914b907d79ead5b5',
+verbose bin dist     tarball: 'http://registry.npmjs.org/commander/-/commander-1.3.2.tgz' } ]
+verbose caching /home/czhenggu/.npm/connect/2.11.0/package/package.json
+verbose loadDefaults connect@2.11.0
+verbose caching /home/czhenggu/.npm/commander/1.3.2/package/package.json
+verbose loadDefaults commander@1.3.2
+silly resolved [ { name: 'range-parser',
+silly resolved     author: 
+silly resolved      { name: 'TJ Holowaychuk',
+silly resolved        email: 'tj@vision-media.ca',
+silly resolved        url: 'http://tjholowaychuk.com' },
+silly resolved     description: 'Range header field string parser',
+silly resolved     version: '0.0.4',
+silly resolved     main: 'index.js',
+silly resolved     dependencies: {},
+silly resolved     devDependencies: { mocha: '*', should: '*' },
+silly resolved     _id: 'range-parser@0.0.4',
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.9',
+silly resolved     _nodeVersion: 'v0.6.13',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'range-parser@0.0.4' },
+silly resolved   { author: { name: 'Roman Shtylman', email: 'shtylman@gmail.com' },
+silly resolved     name: 'cookie',
+silly resolved     description: 'cookie parsing and serialization',
+silly resolved     version: '0.1.0',
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/shtylman/node-cookie.git' },
+silly resolved     keywords: [ 'cookie', 'cookies' ],
+silly resolved     main: 'index.js',
+silly resolved     scripts: { test: 'mocha' },
+silly resolved     dependencies: {},
+silly resolved     devDependencies: { mocha: '1.x.x' },
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _id: 'cookie@0.1.0',
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.9',
+silly resolved     _nodeVersion: 'v0.6.13',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'cookie@0.1.0' },
+silly resolved   { name: 'mkdirp',
+silly resolved     description: 'Recursively mkdir, like `mkdir -p`',
+silly resolved     version: '0.3.5',
+silly resolved     author: 
+silly resolved      { name: 'James Halliday',
+silly resolved        email: 'mail@substack.net',
+silly resolved        url: 'http://substack.net' },
+silly resolved     main: './index',
+silly resolved     keywords: [ 'mkdir', 'directory' ],
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/substack/node-mkdirp.git' },
+silly resolved     scripts: { test: 'tap test/*.js' },
+silly resolved     devDependencies: { tap: '~0.4.0' },
+silly resolved     license: 'MIT',
+silly resolved     _id: 'mkdirp@0.3.5',
+silly resolved     dependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.9',
+silly resolved     _nodeVersion: 'v0.6.13',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'mkdirp@0.3.5' },
+silly resolved   { author: 
+silly resolved      { name: 'Brian J. Brennan',
+silly resolved        email: 'brianloveswords@gmail.com',
+silly resolved        url: 'http://bjb.io' },
+silly resolved     name: 'buffer-crc32',
+silly resolved     description: 'A pure javascript CRC32 algorithm that plays nice with binary data',
+silly resolved     version: '0.2.1',
+silly resolved     contributors: [ { name: 'Vladimir Kuznetsov' } ],
+silly resolved     homepage: 'https://github.com/brianloveswords/buffer-crc32',
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/brianloveswords/buffer-crc32.git' },
+silly resolved     main: 'index.js',
+silly resolved     scripts: { test: './node_modules/.bin/tap tests/*.test.js' },
+silly resolved     dependencies: {},
+silly resolved     devDependencies: { tap: '~0.2.5' },
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _id: 'buffer-crc32@0.2.1',
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.9',
+silly resolved     _nodeVersion: 'v0.6.13',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'buffer-crc32@0.2.1' },
+silly resolved   { name: 'cookie-signature',
+silly resolved     version: '1.0.1',
+silly resolved     description: 'Sign and unsign cookies',
+silly resolved     keywords: [ 'cookie', 'sign', 'unsign' ],
+silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@learnboost.com' },
+silly resolved     dependencies: {},
+silly resolved     devDependencies: { mocha: '*', should: '*' },
+silly resolved     main: 'index',
+silly resolved     _id: 'cookie-signature@1.0.1',
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.9',
+silly resolved     _nodeVersion: 'v0.6.13',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'cookie-signature@1.0.1' },
+silly resolved   { name: 'send',
+silly resolved     version: '0.1.4',
+silly resolved     description: 'Better streaming static file server with Range and conditional-GET support',
+silly resolved     keywords: [ 'static', 'file', 'server' ],
+silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+silly resolved     dependencies: 
+silly resolved      { debug: '*',
+silly resolved        mime: '~1.2.9',
+silly resolved        fresh: '0.2.0',
+silly resolved        'range-parser': '0.0.4' },
+silly resolved     devDependencies: { mocha: '*', should: '*', supertest: '0.0.1', connect: '2.x' },
+silly resolved     scripts: { test: 'make test' },
+silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/send.git' },
+silly resolved     main: 'index',
+silly resolved     _id: 'send@0.1.4',
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.9',
+silly resolved     _nodeVersion: 'v0.6.13',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'send@0.1.4' },
+silly resolved   { name: 'debug',
+silly resolved     version: '1.0.4',
+silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/debug.git' },
+silly resolved     description: 'small debugging utility',
+silly resolved     keywords: [ 'debug', 'log', 'debugger' ],
+silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+silly resolved     contributors: 
+silly resolved      [ { name: 'Nathan Rajlich',
+silly resolved          email: 'nathan@tootallnate.net',
+silly resolved          url: 'http://n8.io' } ],
+silly resolved     dependencies: { ms: '0.6.2' },
+silly resolved     devDependencies: { browserify: '4.1.6', mocha: '*' },
+silly resolved     main: './node.js',
+silly resolved     browser: './browser.js',
+silly resolved     component: { scripts: { 'debug/index.js': 'browser.js', 'debug/debug.js': 'debug.js' } },
+silly resolved     _id: 'debug@1.0.4',
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.9',
+silly resolved     _nodeVersion: 'v0.6.13',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'debug@*' },
+silly resolved   { name: 'fresh',
+silly resolved     author: 
+silly resolved      { name: 'TJ Holowaychuk',
+silly resolved        email: 'tj@vision-media.ca',
+silly resolved        url: 'http://tjholowaychuk.com' },
+silly resolved     description: 'HTTP response freshness testing',
+silly resolved     version: '0.2.0',
+silly resolved     main: 'index.js',
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/visionmedia/node-fresh.git' },
+silly resolved     dependencies: {},
+silly resolved     devDependencies: { mocha: '*', should: '*' },
+silly resolved     _id: 'fresh@0.2.0',
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.9',
+silly resolved     _nodeVersion: 'v0.6.13',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'fresh@0.2.0' },
+silly resolved   { name: 'methods',
+silly resolved     version: '0.1.0',
+silly resolved     description: 'HTTP methods that node supports',
+silly resolved     main: 'index.js',
+silly resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+silly resolved     keywords: [ 'http', 'methods' ],
+silly resolved     author: { name: 'TJ Holowaychuk' },
+silly resolved     license: 'MIT',
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/visionmedia/node-methods.git' },
+silly resolved     _id: 'methods@0.1.0',
+silly resolved     dependencies: {},
+silly resolved     devDependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.9',
+silly resolved     _nodeVersion: 'v0.6.13',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'methods@0.1.0' },
+silly resolved   { name: 'connect',
+silly resolved     version: '2.11.0',
+silly resolved     description: 'High performance middleware framework',
+silly resolved     keywords: [ 'framework', 'web', 'middleware', 'connect', 'rack' ],
+silly resolved     repository: { type: 'git', url: 'git://github.com/senchalabs/connect.git' },
+silly resolved     author: 
+silly resolved      { name: 'TJ Holowaychuk',
+silly resolved        email: 'tj@vision-media.ca',
+silly resolved        url: 'http://tjholowaychuk.com' },
+silly resolved     dependencies: 
+silly resolved      { qs: '0.6.5',
+silly resolved        'cookie-signature': '1.0.1',
+silly resolved        'buffer-crc32': '0.2.1',
+silly resolved        cookie: '0.1.0',
+silly resolved        send: '0.1.4',
+silly resolved        bytes: '0.2.1',
+silly resolved        fresh: '0.2.0',
+silly resolved        pause: '0.0.1',
+silly resolved        uid2: '0.0.3',
+silly resolved        debug: '*',
+silly resolved        methods: '0.0.1',
+silly resolved        'raw-body': '0.0.3',
+silly resolved        negotiator: '0.3.0',
+silly resolved        multiparty: '2.2.0' },
+silly resolved     devDependencies: { should: '>= 2.0.0', mocha: '*', jade: '*', dox: '*' },
+silly resolved     licenses: 
+silly resolved      [ { type: 'MIT',
+silly resolved          url: 'https://raw.github.com/senchalabs/connect/master/LICENSE' } ],
+silly resolved     main: 'index',
+silly resolved     engines: { node: '>= 0.8.0' },
+silly resolved     scripts: { test: 'make' },
+silly resolved     _id: 'connect@2.11.0',
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: false,
+silly resolved     _npmVersion: '1.1.9',
+silly resolved     _nodeVersion: 'v0.6.13',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'connect@2.11.0' },
+silly resolved   { name: 'commander',
+silly resolved     version: '1.3.2',
+silly resolved     description: 'the complete solution for node.js command-line programs',
+silly resolved     keywords: [ 'command', 'option', 'parser', 'prompt', 'stdin' ],
+silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/visionmedia/commander.js.git' },
+silly resolved     dependencies: { keypress: '0.1.x' },
+silly resolved     devDependencies: { should: '>= 0.0.1' },
+silly resolved     scripts: { test: 'make test' },
+silly resolved     main: 'index',
+silly resolved     engines: { node: '>= 0.6.x' },
+silly resolved     _id: 'commander@1.3.2',
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.9',
+silly resolved     _nodeVersion: 'v0.6.13',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'commander@1.3.2' } ]
+info into /usr/local/lib/node_modules/express range-parser@0.0.4
+info into /usr/local/lib/node_modules/express cookie@0.1.0
+info into /usr/local/lib/node_modules/express mkdirp@0.3.5
+info into /usr/local/lib/node_modules/express buffer-crc32@0.2.1
+info into /usr/local/lib/node_modules/express cookie-signature@1.0.1
+info into /usr/local/lib/node_modules/express send@0.1.4
+info into /usr/local/lib/node_modules/express debug@1.0.4
+info into /usr/local/lib/node_modules/express fresh@0.2.0
+info into /usr/local/lib/node_modules/express methods@0.1.0
+info into /usr/local/lib/node_modules/express connect@2.11.0
+info into /usr/local/lib/node_modules/express commander@1.3.2
+info installOne range-parser@0.0.4
+info installOne cookie@0.1.0
+info installOne mkdirp@0.3.5
+info installOne buffer-crc32@0.2.1
+info installOne cookie-signature@1.0.1
+info installOne send@0.1.4
+info installOne debug@1.0.4
+info installOne fresh@0.2.0
+info installOne methods@0.1.0
+info installOne connect@2.11.0
+verbose about to build /usr/local/lib/node_modules/express
+info unbuild /usr/local/lib/node_modules/express
+verbose from cache /usr/local/lib/node_modules/express/package.json
+info preuninstall express@3.4.4
+info installOne commander@1.3.2
+verbose from cache /home/czhenggu/.npm/range-parser/0.0.4/package/package.json
+info unbuild /usr/local/lib/node_modules/express/node_modules/range-parser
+verbose from cache /home/czhenggu/.npm/cookie/0.1.0/package/package.json
+info unbuild /usr/local/lib/node_modules/express/node_modules/cookie
+verbose from cache /home/czhenggu/.npm/mkdirp/0.3.5/package/package.json
+info unbuild /usr/local/lib/node_modules/express/node_modules/mkdirp
+verbose from cache /home/czhenggu/.npm/buffer-crc32/0.2.1/package/package.json
+info unbuild /usr/local/lib/node_modules/express/node_modules/buffer-crc32
+verbose from cache /home/czhenggu/.npm/cookie-signature/1.0.1/package/package.json
+info unbuild /usr/local/lib/node_modules/express/node_modules/cookie-signature
+verbose from cache /home/czhenggu/.npm/send/0.1.4/package/package.json
+info unbuild /usr/local/lib/node_modules/express/node_modules/send
+verbose from cache /home/czhenggu/.npm/debug/1.0.4/package/package.json
+info unbuild /usr/local/lib/node_modules/express/node_modules/debug
+verbose from cache /home/czhenggu/.npm/fresh/0.2.0/package/package.json
+info unbuild /usr/local/lib/node_modules/express/node_modules/fresh
+verbose from cache /home/czhenggu/.npm/methods/0.1.0/package/package.json
+info unbuild /usr/local/lib/node_modules/express/node_modules/methods
+verbose from cache /home/czhenggu/.npm/commander/1.3.2/package/package.json
+info unbuild /usr/local/lib/node_modules/express/node_modules/commander
+info uninstall express@3.4.4
+verbose unbuild express@3.4.4 [ true,
+verbose unbuild express@3.4.4   '/usr/local/lib/node_modules',
+verbose unbuild express@3.4.4   '/usr/local/lib/node_modules' ]
+verbose binRoot [ '/usr/local/bin', { express: './bin/express' } ]
+info postuninstall express@3.4.4
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules/range-parser'
+verbose mkdir done: /usr/local/lib/node_modules/express/node_modules/range-parser 755
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules/cookie'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules/mkdirp'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules/buffer-crc32'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules/cookie-signature'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules/send'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules/debug'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules/fresh'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules/methods'
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/express/node_modules/commander'
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/express/node_modules/range-parser
+silly gunzTarPerm modes [ '755', '644' ]
+verbose mkdir done: /usr/local/lib/node_modules/express/node_modules/cookie 755
+verbose mkdir done: /usr/local/lib/node_modules/express/node_modules/mkdirp 755
+verbose mkdir done: /usr/local/lib/node_modules/express/node_modules/buffer-crc32 755
+verbose mkdir done: /usr/local/lib/node_modules/express/node_modules/cookie-signature 755
+verbose mkdir done: /usr/local/lib/node_modules/express/node_modules/send 755
+verbose mkdir done: /usr/local/lib/node_modules/express/node_modules/debug 755
+verbose mkdir done: /usr/local/lib/node_modules/express/node_modules/fresh 755
+verbose mkdir done: /usr/local/lib/node_modules/express/node_modules/methods 755
+verbose mkdir done: /usr/local/lib/node_modules/express/node_modules/commander 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/express/node_modules/cookie
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/express/node_modules/mkdirp
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/express/node_modules/buffer-crc32
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/express/node_modules/cookie-signature
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/express/node_modules/send
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/express/node_modules/debug
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/express/node_modules/fresh
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/express/node_modules/methods
+silly gunzTarPerm modes [ '755', '644' ]
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/express/node_modules/commander
+silly gunzTarPerm modes [ '755', '644' ]
+ERR! error rolling back express@3.4.4 Error: ENOTEMPTY, rmdir '/usr/local/lib/node_modules/express'
+ERR! Unsupported
+ERR! Not compatible with your version of node/npm: connect@2.11.0
+ERR! Required: {"node":">= 0.8.0"}
+ERR! Actual:   {"npm":"1.1.9","node":"0.6.13"}
+ERR! 
+ERR! System Linux 2.6.32-431.11.2.el6.bz1069874.3.x86_64
+ERR! command "node" "/usr/local/bin/npm" "install" "-g" "express"
+ERR! cwd /home/czhenggu/node-v0.10.33-linux-x64/bin
+ERR! node -v v0.6.13
+ERR! npm -v 1.1.9
+ERR! code ENOTSUP
+ERR! message Unsupported
+ERR! errno {}
+verbose exit [ 1, true ]

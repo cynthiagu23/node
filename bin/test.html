@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fizzy/USSR 101</title>
+
+    <!-- Bootstrap -->
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/dist/js/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/dist/js/dust-core.js"></script>
+    <script src="/dist/js/dust-helpers.js"></script>
+    <script src="/dist/js/dust-ui-helpers.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+    <div class="container">    
+    <h1>Hello, Fizzy USSR!</h1>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Table of Content</h3>
+      </div>
+      <div class="panel-body">
+        <a href="#i0">Introduction</a><br>
+        <a href="#h0">How to use Fizzy</a><br>
+        <a href="#r0">The HTML source of this page</a><br>
+        <a href="#e0">Examples:</a><br>
+        <div class="ul">
+          <li><a href="#r1">Simple Fizzy Embed</a>
+              -- Host page fills the content from embed. Fizzy handles the request of embeds.
+          </li>
+          <li><a href="#r2">Fizzy Embed with USSR Rendering</a>
+              -- Host page fills the content from embed. fs-render-control is set to 'server'and the embed includes a Json file and a javascript template. The template is filled with Json file data and is rendered on the server side.
+          </li>
+          <li><a href="#r4">Fizzy Embed with Custom Rendering</a>
+              -- Host page fills the content from embed. The embed includes javascript that is rendered on the client side.
+          </li>
+          <li><a href="#r5">Fizzy Embed with XMLHttpRequest</a>
+              -- Host page fills the content from embed by setting the fs-fetch-control.
+          </li>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default" id="i0">
+      <div class="panel-heading">
+        <h3 class="panel-title">Introduction</h3>
+      </div>
+      <div class="panel-body">
+        <h4>Fizzy and USSR give web developers a great flexibility to seperate different business logic into multiple embed without overlapping, handle the traffic between clients and CDN/web servers, and render embeds with static and dynamic content on either client or server side. Fizzy decouples web developers' work into standlone embeds, which increases productivity by decreasing the overlapping. When loading embeds by Fizzy, the latency between the client and the server is reduced since Fizzy keeps all the traffic within the linkedin domain. USSR provides server side rendering capability to improve the browsing experience for users with less powerful devices. This page showcases 4 examples of incorperating Fizzy and USSR in developing rich-featured web applications. To help with understanding, each example comes with the source, display and explanation. The number in each explanation maps with the number in code and display for the same example.</h4>
+      </div>
+    </div>
+    
+    <div class="panel panel-default" id="h0">
+      <div class="panel-heading">
+        <h3 class="panel-title">How to use Fizzy</h3>
+      </div>
+      <div class="panel-body">
+        Fizzy is easy to use for web developers. In the Linkedin architecture, most of the work is taken care of by frontier or play. This part of the work including the specific headers to be included in the html or json file. The part of the work exposed to the web developers is to include the embed uri in a script line. How this part of the work is done can be found in examples on this page. You can also find the source code of the this html page before anything is processed by Fizzy and get an idea of what is done in between.
+      </div>
+    </div>
+
+    <div class="panel panel-default" id="r0">
+      <div class="panel-heading">
+        <h3 class="panel-title">HTML Source</h3>
+      </div>
+      <div class="panel-body">
+      <script>
+        $(document).ready(function(){
+          $("#hide").click(function(){
+            $("p").hide();
+          });
+          $("#show").click(function(){
+            $("p").load("test.txt").show();
+          });
+        });
+      </script>
+      <pre><p></p></pre>
+        <button id="show">Show HTML source code</button>
+        <button id="hide">Hide</button>
+      </div>
+    </div>
+    
+    <div class="panel panel-default" id="e0">
+      <div class="panel-heading">
+        <h3 class="panel-title">Examples</h3>
+      </div>
+      <div class="panel-body">
+      <div class="row" id="r1">
+        <div class="col-md-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+              Simple Fizzy Embed -- Explaination
+              </h3>
+            </div>
+            <div class="panel-body">
+              Fizzy provides a platform to include multiple embeds in a hostpage, which allows each single business logic to be implemented in a standalone embed. All the traffic for embeds on a page is between a Fizzy server and an endpoint, which makes the latency of loading a page smaller for end users.<br>
+              <img src="simpleEmbed.jpg" alt="Mountain View" style="width:293px;height:443px">
+            </div>
+          </div>
+        </div> <!-- row 1, col 1-->
+
+        <div class="col-md-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+              Simple Fizzy Embed -- Code
+              </h3>
+            </div>
+            <div class="panel-body">
+            <span style="background-color: #000000"><font color="white"> 1 </font></span>Host Page:
+            <pre>
+Header:
+Content-Type: text/html
+X-FS-Page-Parse: 1
+      
+Body:
+&lt;script type='fs/embed' fs-uri='http://czhenggu-ld1:6661/embed1' fs-id=embed1 &gt;&lt;/script&gt;
+            </pre> 
+
+            <span style="background-color: #000000"><font color="white"> 2 </font></span>Embed Page (embed1.html):
+            <pre>
+This is embed1.html
+            </pre>
+            </div>
+          </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+              Simple Fizzy Embed -- Display
+              </h3>
+            </div>
+            <div class="panel-body">
+              <span style="background-color: #000000"><font color="white"> 3 </font></span><br>
+              <script type='fs/embed' fs-uri='http://czhenggu-ld1:6661/embed1' fs-id='embed1' ></script>
+            </div>
+          </div>
+          
+        </div> <!-- row 1, col 2 -->
+      </div> <!-- row 1 -->
+
+      <div class = "row" id="r2">
+        <div class="col-md-6">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+              Fizzy Embed with USSR Rendering -- Explanation
+              </h3>
+            </div>
+            <div class="panel-body">
+              USSR provides server side rendering for resource intensive javascipts on a page. This feature improves the experience for mobile device users who have less powerful devices.<br>
+              <img src="serverRender.jpg" alt="Mountain View" style="width:393px;height:443px">
+            </div>
+          </div>
+          
+        </div> <!-- row 2, col 1-->
+
+        <div class="col-md-6">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+              Fizzy Embed with USSR Rendering -- Code
+              </h3>
+            </div>
+            <div class="panel-body">
+            <span style="background-color: #000000"><font color="white"> 1 </font></span>Host Page:
+            <pre>
+Header:
+Content-Type: text/html
+X-FS-Page-Parse: 1
+
+Body:
+&lt;script type='fs/embed' fs-uri='http://czhenggu-ld1:6661/embed3' fs-id='embed3' fs-render-control='server'&gt;&lt;/script&gt;
+            </pre>
+
+            <span style="background-color: #000000"><font color="white"> 2 </font></span>Embed Page (embed3.json):
+            <pre>
+Header:
+Content-Type: application/json
+X-FS-TL: http://czhenggu-ld1:6661/temp_name.js
+X-FS-Template-Keys: __default__=demo
+
+Body:
+{
+"name": "Bob",
+"count": 30
+}
+            </pre>
+
+            <span style="background-color: #000000"><font color="white"> 3 </font></span>Template Page (temp_name.js):
+            <pre>
+Header:
+Content-Type: application/javascript
+
+Body:
+(function() {
+  dust.register("demo", body_0);
+
+  function body_0(chk, ctx) {
+     return chk.write("Hello ").reference(ctx.get(["name"], false), ctx, "h").write("! You have ").reference(ctx.get(["count"], false), ctx, "h").write(" new messages.");
+  }
+  body_0.__dustBody = !0;
+  return body_0;
+})();
+            </pre>
+            </div>
+          </div>
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+              Fizzy Embed with USSR Rendering -- Display
+              </h3>
+            </div>
+            <div class="panel-body">
+              <span style="background-color: #000000"><font color="white"> 4 </font></span><br>
+              <script type='fs/embed' fs-uri='http://czhenggu-ld1:6661/embed3' fs-id='embed3' fs-render-control='server'></script>
+            </div>
+          </div>
+          
+        </div> <!-- row 2, col 2-->
+      </div> <!-- row 2 -->
+
+      <div class = "row" id="r4">
+        <div class="col-md-6">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+              Fizzy Embed with Custom Rendering -- Explanation
+              </h3>
+            </div>
+            <div class="panel-body">
+            Web developers can choose to let Fizzy handle the traffic and render the page on the client side to release the resource on the server side.<br>
+            <img src="customRender.jpg" alt="Mountain View" style="width:304px;height:443px">
+            </div>
+          </div>
+        </div> <!-- row 4, col 1-->
+        <div class="col-md-6">
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+              Fizzy Embed with Custom Rendering -- Code
+              </h3>
+            </div>
+            <div class="panel-body">
+            <span style="background-color: #000000"><font color="white"> 1 </font></span>Host Page:
+            <pre>
+Header:
+Content-Type: text/html
+X-FS-Page-Parse: 1
+
+Body:
+&lt;script type='fs/embed' fs-id='hello' fs-uri='http://czhenggu-ld1:6661/embed5' fs-render-control='custom'&gt;&lt;/script&gt;
+&lt;script&gt;
+  fs.custom('hello', function(id, e) {
+    e.embed();
+    });
+&lt;/script&gt;
+            </pre>
+
+            <span style="background-color: #000000"><font color="white"> 2 </font></span>Embed Page (embed5.json):
+            <pre>
+Header:
+Content-Type: application/json
+X-FS-TL: http://czhenggu-ld1:6661/jos.js
+X-FS-Template-Keys: __default__=alien
+
+Body:
+{
+  "name": "Alice",
+  "count": 20
+}
+            </pre>
+
+            <span style="background-color: #000000"><font color="white"> 3 </font></span>Template Page (jos.js):
+            <pre>
+Header:
+Content-Type: application/javascript
+
+Body:
+(function() {
+  dust.register("alien", body_0);
+
+  function body_0(chk, ctx) {
+    return chk.write("Hello ").reference(ctx.get(["name"], false), ctx, "h").write("! You have ").reference(ctx.get(["count"], false), ctx, "h").write(" new messages.");
+  }
+  body_0.__dustBody = !0;
+  return body_0;
+})();
+
+            </pre>
+            </div>
+          </div>
+          <div class="panel panel-warning">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+              Fizzy Embed with Custom Rendering -- Display
+              </h3>
+            </div>
+            <div class="panel-body">
+              <!-- parsed by fizzy -->
+<span style="background-color: #000000"><font color="white"> 4 </font></span><br>
+<script type='fs/embed' fs-id='hello' fs-uri='http://czhenggu-ld1:6661/embed5' fs-render-control='custom'></script>
+
+<script>
+	fs.custom('hello', function(id, e) {
+		e.embed();
+  	});
+</script>
+            </div>
+          </div>
+          
+        </div> <!-- row 4, col 2-->
+      </div> <!-- row 4 -->
+
+
+      <div class = "row" id="r5">
+        <div class="col-md-6">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+              Fizzy Embed with XMLHttpRequest -- Explanation
+              </h3>
+            </div>
+            <div class="panel-body">
+              <!-- parsed by fizzy -->
+              Web developers can also choose to let the client side handle the traffic by using XMLHttpRequest.<br>
+              <img src="xhr.jpg" alt="Mountain View" style="width:297px;height:443px">
+              <!-- also parsed by fizzy -->
+            </div>
+          </div>
+          
+        </div> <!-- row 3, col 1-->
+
+        <div class="col-md-6">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+              Fizzy Embed with XMLHttpRequest -- Code
+              </h3>
+            </div>
+            <div class="panel-body">
+            <span style="background-color: #000000"><font color="white"> 1 </font></span>Host Page:
+            <pre>
+&lt;script type='fs/embed' fs-id='delorean' fs-uri='http://czhenggu-ld1:6661/embed6' fs-fetch-type='xhr' fs-render-control='immediate'&gt;&lt;/script&gt;
+            </pre>
+            <span style="background-color: #000000"><font color="white"> 2 </font></span>Embed Page (embed6.html):
+            <pre>
+Header:
+Content-Type: text/html
+            </pre>
+            </div>
+          </div>
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+              Fizzy Embed with XMLHttpRequest -- Display
+              </h3>
+            </div>
+            <div class="panel-body">
+              <!-- parsed by fizzy -->
+              <span style="background-color: #000000"><font color="white"> 3 </font></span><br>
+              <script type='fs/embed' fs-id='delorean' fs-uri='http://czhenggu-ld1:6661/embed6' fs-fetch-type='xhr' fs-render-control='immediate'></script>
+              <!-- also parsed by fizzy -->
+            </div>
+          </div>
+          
+        </div> <!-- row 3, col 2-->
+      </div> <!-- row 3 -->
+
+      </div>
+    </div>
+
+   </div> <!--container-->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+  </body>
+</html>
+

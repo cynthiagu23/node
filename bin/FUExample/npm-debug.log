@@ -1,0 +1,40 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+info using npm@1.1.9
+info using node@v0.6.13
+verbose config file /home/czhenggu/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /usr/local/lib/node_modules/npm/npmrc
+verbose caching /home/czhenggu/node-v0.10.33-linux-x64/bin/FUExample/package.json
+verbose loadDefaults FUExample@0.0.0
+verbose run-script [ 'prestart', 'start', 'poststart' ]
+info prestart FUExample@0.0.0
+info start FUExample@0.0.0
+verbose unsafe-perm in lifecycle true
+silly exec sh "-c" "node ./bin/www"
+silly spawning [ 'sh',
+silly spawning   [ '-c', 'node ./bin/www' ],
+silly spawning   '/home/czhenggu/node-v0.10.33-linux-x64/bin/FUExample' ]
+info FUExample@0.0.0 Failed to exec start script
+ERR! FUExample@0.0.0 start: `node ./bin/www`
+ERR! `sh "-c" "node ./bin/www"` failed with 1
+ERR! 
+ERR! Failed at the FUExample@0.0.0 start script.
+ERR! This is most likely a problem with the FUExample package,
+ERR! not with npm itself.
+ERR! Tell the author that this fails on your system:
+ERR!     node ./bin/www
+ERR! You can get their info via:
+ERR!     npm owner ls FUExample
+ERR! There is likely additional logging output above.
+ERR! 
+ERR! System Linux 2.6.32-431.11.2.el6.bz1069874.3.x86_64
+ERR! command "node" "/usr/local/bin/npm" "start"
+ERR! cwd /home/czhenggu/node-v0.10.33-linux-x64/bin/FUExample
+ERR! node -v v0.6.13
+ERR! npm -v 1.1.9
+ERR! code ELIFECYCLE
+ERR! message FUExample@0.0.0 start: `node ./bin/www`
+ERR! message `sh "-c" "node ./bin/www"` failed with 1
+ERR! errno {}
+verbose exit [ 1, true ]
